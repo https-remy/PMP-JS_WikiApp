@@ -38,17 +38,17 @@ function handleEmptyInput() {
 }
 
 function createAndShowResult(searchResults) {
+	const url = `https://en.wikipedia.org?curid=${searchResults.pageid}`;
+
 	searchResults.forEach((result) => {
 		const linkResult = document.createElement("p");
 		linkResult.classList.add("result-link");
-		linkResult.textContent = `https://en.wikipedia.org?curid=${result.pageid}`;
-		console.log(linkResult.textContent);
+		linkResult.textContent = url;
 
 		const titleResult = document.createElement("a");
 		titleResult.classList.add("result-title");
 		titleResult.textContent = result.title;
-		titleResult.href = `https://en.wikipedia.org?curid=${result.pageid}`;
-		console.log(titleResult.href);
+		titleResult.href = url;
 
 		const resultSnippet = document.createElement("p");
 		resultSnippet.classList.add("result-snippet");
