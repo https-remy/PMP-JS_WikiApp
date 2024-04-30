@@ -48,7 +48,8 @@ input {
 
 .error-message {
 	max-width: 600px;
-	margin: 70px auto;
+	margin: 10px auto;
+	color: crimson;
 }
 
 .loader {
@@ -78,10 +79,6 @@ input {
 	to {
 		transform: translateY(10px);
 	}
-}
-
-.result-item {
-	margin-bottom: 20px;
 }
 
 .result-title {
